@@ -87,13 +87,21 @@ Copy code
 backend/
 │
 ├── controllers/       # Controllers for handling routes
+
 ├── middleware/        # JWT authentication middleware
+
 ├── models/            # Mongoose models for User, Post, etc.
+
 ├── routes/            # API routes for users, posts, etc.
+
 ├── utils/             # Helper functions (e.g., Cloudinary image upload)
+
 ├── .env               # Environment variables
+
 ├── server.js          # Entry point for the Node.js server
+
 └── package.json       # Backend dependencies and scripts
+
 
 Frontend (Client)
 bash :
@@ -101,13 +109,21 @@ Copy code
 frontend/
 │
 ├── src/
+
 │   ├── components/     # Reusable React components (Navbar, Post, etc.)
+
 │   ├── context/        # Context API for global state management (auth, theme)
+
 │   ├── pages/          # Pages for different routes (Home, Profile, etc.)
+
 │   ├── services/       # Axios API calls for backend communication
+
 │   ├── App.js          # Main entry point for React app
+
 │   └── index.js        # ReactDOM.render() call
+
 ├── .env                # Frontend environment variables
+
 └── package.json        # Frontend dependencies and scripts
 
 Usage
