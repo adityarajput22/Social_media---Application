@@ -65,9 +65,15 @@ const Profile = () => {
               <div className='flex flex-col gap-1'>
                 <span className='font-semibold'>{userProfile?.bio || 'bio here...'}</span>
                 <Badge className='w-fit' variant='secondary'><AtSign /> <span className='pl-1'>{userProfile?.username}</span> </Badge>
+<<<<<<< HEAD
                 <span>Hello this side Aditya Kumar Singh</span>
                 <span>Software Engineer</span>
                 <span>Pin me here = 2003singhadityakumar@gmail.com</span>
+=======
+                <span>Hello this side Aditya Kumar Singh </span>
+                <span>Software Engineer</span>
+                <span>Pin me here=> 2003singhadityakumar@gmail.com</span>
+>>>>>>> 8cfaca1d7ff31ccb6983824906f33dfc0706e805
               </div>
             </div>
           </section>
