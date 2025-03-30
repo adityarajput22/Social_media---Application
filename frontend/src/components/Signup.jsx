@@ -24,6 +24,7 @@ const Signup = () => {
     const signupHandler = async (e) => {
         e.preventDefault();
         try {
+            console.log("Hello") ; 
             setLoading(true);
             const res = await axios.post('http://localhost:8000/api/v1/user/register', input, {
                 headers: {

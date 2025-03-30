@@ -34,4 +34,11 @@ module.exports = {
     },
   },
   plugins: [require("tailwindcss-animate")],
+  darkMode: 'class', // Enable class-based dark mode
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+
 }
+

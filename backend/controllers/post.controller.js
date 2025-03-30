@@ -29,7 +29,7 @@ export const addNewPost = async (req, res) => {
         });
         const user = await User.findById(authorId);
         if (user) {
-            user.posts.push(post._id);
+            user.posts.push(post._id);  // user model ke andr hmney post bnarkha hai uskey andr hm .push se insert kr dengey 
             await user.save();
         }
 

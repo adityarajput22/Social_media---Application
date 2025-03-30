@@ -8,7 +8,6 @@ import postRoute from "./routes/post.route.js";
 import messageRoute from "./routes/message.route.js";
 import { app, server } from "./socket/socket.js";
 import path from "path";
- 
 dotenv.config();
 
 
@@ -21,9 +20,18 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(urlencoded({ extended: true }));
 const corsOptions = {
-    origin: process.env.URL,
+    // origin: process.env.URL,
+    origin: 'http://localhost:5173',
+    // origin: ['http://localhost:5173/', 'http://localhost:8000/'],
     credentials: true
 }
+
+// const corsOptions = {
+//     // origin: process.env.URL,
+//     origin:[ 'https://localhost:5173','http://localhost:8000'] ,
+//     credentials: true ,
+// }
+
 app.use(cors(corsOptions));
 
 // yha pr apni api ayengi
@@ -32,10 +40,10 @@ app.use("/api/v1/post", postRoute);
 app.use("/api/v1/message", messageRoute);
 
 
-app.use(express.static(path.join(__dirname, "/frontend/dist")));
-app.get("*", (req,res)=>{
-    res.sendFile(path.resolve(__dirname, "frontend", "dist", "index.html"));
-})
+// app.use(express.static(path.join(__dirname, "/frontend/dist")));
+// app.get("*", (req,res)=>{
+//     res.sendFile(path.resolve(__dirname, "frontend", "dist", "index.html"));
+// })
 
 
 server.listen(PORT, () => {

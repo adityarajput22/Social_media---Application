@@ -58,7 +58,8 @@ export const login = async (req, res) => {
             });
         };
 
-        const token = await jwt.sign({ userId: user._id }, process.env.SECRET_KEY, { expiresIn: '1d' });
+        // yha await use krney pr error aarha hai 
+        const token = jwt.sign({ userId: user._id }, process.env.SECRET_KEY, { expiresIn: '1d' });
 
         // populate each post if in the posts array
         const populatedPosts = await Promise.all(
@@ -205,3 +206,6 @@ export const followOrUnfollow = async (req, res) => {
         console.log(error);
     }
 }
+
+
+// export{register,}
