@@ -1,5 +1,5 @@
-import React, { useState } from 'react'
-import { Avatar, AvatarFallback, AvatarImage } from './ui/avatar'
+import React, { useState } from 'react';
+import { Avatar, AvatarFallback, AvatarImage } from './ui/avatar';
 import useGetUserProfile from '@/hooks/useGetUserProfile';
 import { Link, useParams } from 'react-router-dom';
 import { useSelector } from 'react-redux';
@@ -64,16 +64,10 @@ const Profile = () => {
               </div>
               <div className='flex flex-col gap-1'>
                 <span className='font-semibold'>{userProfile?.bio || 'bio here...'}</span>
-                <Badge className='w-fit' variant='secondary'><AtSign /> <span className='pl-1'>{userProfile?.username}</span> </Badge>
-<<<<<<< HEAD
+                <Badge className='w-fit' variant='secondary'><AtSign /> <span className='pl-1'>{userProfile?.username}</span></Badge>
                 <span>Hello this side Aditya Kumar Singh</span>
                 <span>Software Engineer</span>
                 <span>Pin me here = 2003singhadityakumar@gmail.com</span>
-=======
-                <span>Hello this side Aditya Kumar Singh </span>
-                <span>Software Engineer</span>
-                <span>Pin me here=> 2003singhadityakumar@gmail.com</span>
->>>>>>> 8cfaca1d7ff31ccb6983824906f33dfc0706e805
               </div>
             </div>
           </section>
@@ -108,14 +102,15 @@ const Profile = () => {
                       </div>
                     </div>
                   </div>
-                )
+                );
               })
             }
           </div>
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Profile
+export default Profile;
+
